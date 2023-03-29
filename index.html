@@ -15,6 +15,10 @@
                 <div class="slide active">
                     <img :src="slides[activeIndex].image" :alt="slides[activeIndex].title">
                 </div>
+                <div class="description">
+                    <h4>{{slides[activeIndex].title}}</h4>
+                    <p>{{slides[activeIndex].text}}</p>
+                </div>
             </div>
             <div class="aside">
                 <div class="card" v-for="(slide, index) in slides" :key="index">
