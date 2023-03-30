@@ -21,8 +21,8 @@
                 </div>
             </div>
             <div class="aside">
-                <div class="card" v-for="(slide, index) in slides" :key="index">
-                    <img :src="slide.image" :alt="slide.title">
+                <div class="card" :class="index === activeIndex ? 'opacity' : ''" v-for="(slide, index) in slides" :key="index">
+                    <img :class="slides[index].opacity" :src="slide.image" :alt="slide.title">
                 </div>
                 <i id="goBack" class="fa-solid fa-chevron-circle-up" @click="goNext"></i>
                 <i id="goNext" class="fa-solid fa-chevron-circle-down" @click="goBack"></i>

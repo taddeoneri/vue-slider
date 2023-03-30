@@ -36,11 +36,13 @@ createApp({
     methods: {
         goNext(){
             this.activeIndex == this.slides.length - 1 ? this.activeIndex = 0 : this.activeIndex ++;
+            this.slides.classList.add('opacity');
+            console.log(this.activeIndex);
         },
         goBack(){
             this.activeIndex == 0 ? this.activeIndex = this.slides.length - 1 : this.activeIndex --;
+            this.slides.classList.add('opacity');
+            console.log(this.activeIndex);
         },
-        // setInterval(goNext, 1000)
-
     }
 }).mount('#app');
